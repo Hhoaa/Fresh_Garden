@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.store-container {
+    display: flex;
+    gap: 20px;
+}
+
+.store-list {
+    width: 40%;
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.store-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.map {
+    width: 60%;
+    height: 400px;
+    border: 1px solid #ccc;
+}

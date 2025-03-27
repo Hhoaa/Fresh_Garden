@@ -1,0 +1,263 @@
+/* Reset chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Cách header 80px để không bị che */
+body {
+    padding-top: 80px;
+}
+
+/* Container sản phẩm */
+.product-detail-container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* Ảnh sản phẩm */
+.product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Danh sách ảnh thu nhỏ - hiển thị dọc */
+.thumbnail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.thumbnail:hover, .thumbnail.active {
+    border-color: #ff6600;
+}
+
+/* Ảnh chính */
+.main-image img {
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Thông tin sản phẩm */
+.product-info {
+    flex: 1;
+}
+
+.product-info h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.product-category {
+    color: gray;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 26px;
+    color: #d80000;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Nút chọn size */
+.option-button {
+    background: white;
+    border: 2px solid #ccc;
+    padding: 12px 18px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.option-button:hover, .option-button.active {
+    background: #ff6600;
+    color: white;
+    border-color: #ff6600;
+}
+
+/* Chỉnh số lượng */
+.quantity {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+.btn-quantity {
+    background: #ddd;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-quantity:hover {
+    background: #bbb;
+}
+
+#quantity {
+    width: 50px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+/* Nút mua hàng */
+.add-to-cart, .buy-now {
+    padding: 14px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.add-to-cart {
+    background: black;
+    color: white;
+    margin-left: 10px;
+}
+
+.buy-now {
+    background: red;
+    color: white;
+}
+
+.add-to-cart:hover, .buy-now:hover {
+    transform: scale(1.05);
+}
+
+/* Miễn phí giao hàng */
+.free-shipping {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.free-shipping img {
+    width: 22px;
+    margin-right: 5px;
+}
+
+/* --- THÔNG TIN SẢN PHẨM --- */
+.product-description {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #fff;
+    border-left: 6px solid #ff6600;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* Tiêu đề "Thông tin sản phẩm" căn giữa và có hai gạch ngang màu hồng */
+.product-description-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    margin: 50px 0 20px;
+}
+
+.product-description-title::before,
+.product-description-title::after {
+    content: "";
+    width: 60px;
+    height: 5px;
+    background: #ff4081;
+    position: absolute;
+    top: 50%;
+}
+
+.product-description-title::before {
+    left: 32%;
+}
+
+.product-description-title::after {
+    right: 32%;
+}
+
+/* --- SẢN PHẨM LIÊN QUAN --- */
+.related-products {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.related-products h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Slider sản phẩm liên quan */
+.product-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 15px;
+}
+
+/* Sản phẩm liên quan */
+.related-item {
+    min-width: 180px;
+    text-align: center;
+}
+
+.related-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.related-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Thanh cuộn mượt */
+.product-list::-webkit-scrollbar {
+    height: 8px;
+}
+
+.product-list::-webkit-scrollbar-thumb {
+    background: #ff6600;
+    border-radius: 10px;
+}
+
+.product-list::-webkit-scrollbar-track {
+    background: #ddd;
+}

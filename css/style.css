@@ -1,0 +1,255 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+}
+
+/* =================== BANNER =================== */
+.banner {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Ảnh banner */
+.banner img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+/* Hiệu ứng zoom nhẹ và sáng dần khi hover */
+.banner:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Hiệu ứng ánh sáng chạy ngang */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1) 30%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.1) 70%);
+    transform: skewX(-25deg);
+    animation: sparkleEffect 3s infinite linear;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Khi di chuột vào banner, ánh sáng hiển thị */
+.banner:hover::before {
+    opacity: 1;
+}
+
+/* Animation ánh sáng chạy qua */
+@keyframes sparkleEffect {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+/* =================== BỐ CỤC TRANG =================== */
+main {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* =================== BỘ LỌC SẢN PHẨM =================== */
+.filter {
+    width: 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 120px;
+    max-height: fit-content;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+.filter h2 {
+    text-align: center;
+    color: #ff6f61;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.filter ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.filter ul li {
+    padding: 14px;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 18px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.filter ul li:hover {
+    background: #ff6f61;
+    transform: scale(1.05);
+}
+
+.filter ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+}
+
+.filter ul li:hover a {
+    color: white;
+}
+
+/* =================== DANH SÁCH SẢN PHẨM =================== */
+.products {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Bộ chọn sắp xếp */
+.sort {
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+}
+
+.sort select {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+/* Lưới sản phẩm */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* =================== CARD SẢN PHẨM =================== */
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hiệu ứng lật ảnh */
+.product-img {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 12px;
+}
+
+.product-img .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.product-img:hover .front {
+    opacity: 0;
+}
+
+.product-img:hover .back {
+    opacity: 1;
+}
+
+/* Tên sản phẩm */
+.product-name {
+    font-size: 22px;
+    margin: 12px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Giá sản phẩm */
+.product-price {
+    font-size: 20px;
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+/* =================== PHÂN TRANG =================== */
+.pagination {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 12px 18px;
+    margin: 6px;
+    border-radius: 6px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.pagination a:hover {
+    background: #0056b3;
+}
+
+.pagination .active {
+    background: #0056b3;
+}
