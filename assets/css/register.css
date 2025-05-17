@@ -1,0 +1,120 @@
+/* Nền tổng thể */
+body {
+      background: 
+        linear-gradient(to right, #f8f8f8, #fda2a2),
+        url('https://www.transparenttextures.com/patterns/food.png');
+    background-repeat: repeat;
+    background-size: 40px 40px; 
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container đăng ký */
+.section .container {
+    max-width: 500px; /* Increased from 400px for wider form */
+    margin: 80px auto;
+    padding: 40px 35px; /* Slightly more horizontal padding */
+    background-color: rgba(255, 230, 240, 0.95); /* Slightly transparent pink */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Tiêu đề */
+.section .container h2 {
+    color: #d63384;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Thông báo lỗi */
+.section .container .error {
+    color: #d63384;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* Input chung */
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px; /* Slightly larger font for wider inputs */
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #d63384;
+    outline: none;
+}
+
+/* Button */
+.login-form .login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #d63384;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form .login-btn:hover {
+    background-color: #b0216e;
+}
+/* Thêm vào cuối file assets/css/register.css */
+
+/* Kiểu cho thông báo thành công */
+.success {
+    color: #28a745;
+    background-color: #e7f3e7;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Kiểu cho trường mật khẩu và nút hiển thị/ẩn */
+.password-group {
+    position: relative;
+}
+
+.password-group input {
+    padding-right: 40px;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+
+.toggle-password i {
+    font-size: 1.2em;
+}

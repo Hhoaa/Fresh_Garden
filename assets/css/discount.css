@@ -1,0 +1,97 @@
+/* Thêm vào cuối file categories.css */
+
+/* Ô mã giảm giá */
+.discount-code {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.discount-code label {
+    font-weight: 600;
+    color: #333;
+}
+
+.discount-code input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.apply-discount-btn {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.apply-discount-btn:hover {
+    background: #218838;
+}
+
+/* Form thanh toán */
+.checkout-form {
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.checkout-form .form-group {
+    margin-bottom: 15px;
+}
+
+.checkout-form select,
+.checkout-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.checkout-form textarea {
+    resize: vertical;
+}
+
+.detail-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.detail-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .discount-code {
+        flex-direction: column;
+    }
+
+    .discount-code input {
+        width: 100%;
+    }
+
+    .checkout-form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .discount-code input {
+        font-size: 0.9em;
+    }
+
+    .checkout-form select,
+    .checkout-form textarea {
+        font-size: 0.9em;
+    }
+}

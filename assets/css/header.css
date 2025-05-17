@@ -1,0 +1,172 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(90deg, #ffe5ec, #ffcad4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d6336c;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #6f1d1b;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #6f1d1b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d6336c;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons a {
+    color: #6f1d1b;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.icons a:hover {
+    color: #d6336c;
+    transform: scale(1.1);
+}
+
+.login-button,
+.register-button {
+    background-color: #d6336c;
+    color: #fff !important;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-button:hover,
+.register-button:hover {
+    background-color: #ad1754;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .icons {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+/* Thêm vào cuối file assets/css/header.css */
+
+/* Định dạng cho user-menu */
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Định dạng cho phần tên người dùng và icon */
+.user-dropdown .user-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.user-dropdown .user-name:hover {
+    background-color: #f0f0f0;
+}
+
+/* Ẩn dropdown-content mặc định */
+.user-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1;
+    right: 0;
+    top: 100%;
+}
+
+/* Hiển thị dropdown-content khi hover */
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Định dạng các liên kết trong dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f8f8;
+}
+
+/* Định dạng icon trong dropdown */
+.dropdown-content a i {
+    color: #666;
+}

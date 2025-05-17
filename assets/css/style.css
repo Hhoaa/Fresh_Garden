@@ -1,0 +1,464 @@
+/* ======================= RESET & CƠ BẢN ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #fffaf5;
+    color: #333;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.section {
+    padding: 70px 0;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+/* ======================= SLIDESHOW ======================= */
+.slideshow-section {
+    padding: 60px 0 40px;
+    background: linear-gradient(135deg, rgba(255, 111, 97, 0.1), rgba(46, 204, 113, 0.1));
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 550px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow .slick-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important;
+    gap: 15px;
+    z-index: 20;
+}
+
+.slideshow .slick-dots li button {
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.slideshow .slick-dots li.slick-active button {
+    background: #ff6f61;
+    transform: scale(1.3);
+}
+
+.slideshow .slick-prev,
+.slideshow .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.6em;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.slideshow .slick-prev {
+    left: 20px;
+}
+
+.slideshow .slick-next {
+    right: 20px;
+}
+
+.slideshow .slick-prev:hover,
+.slideshow .slick-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* ======================= DANH MỤC ======================= */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+.shop {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.shop:hover {
+    transform: translateY(-8px);
+}
+
+.shop-img {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0;
+}
+
+.shop-img img {
+    max-height: 100%;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.shop:hover .shop-img img {
+    transform: scale(1.1);
+}
+
+.shop-body h3 {
+    font-size: 1.1em;
+    color: #333;
+    padding: 10px 0;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.shop-body h3:hover {
+    color: #e74c3c;
+}
+
+/* ======================= SẢN PHẨM NỔI BẬT ======================= */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title .title {
+    font-size: 2.2em;
+    color: #333;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title .title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: #2ecc71;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-md-12 {
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* --- KHUNG CHỨA SLICK SẢN PHẨM --- */
+.products-slick {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+/* --- THẺ SẢN PHẨM --- */
+.product {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23%;
+    min-width: 220px;
+    max-width: 270px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+    border-radius: 12px 12px 0 0;
+}
+
+/* --- THÔNG TIN --- */
+.product-body {
+    padding: 15px 12px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.product-name a {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.product-name a:hover {
+    color: #e74c3c;
+}
+
+.product-price {
+    font-size: 1.1em;
+    color: #e74c3c;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.product-body p {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+/* --- ICON --- */
+.product-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.product-btns button {
+    background: none;
+    border: none;
+    color: #777;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.product-btns button:hover {
+    color: #e74c3c;
+}
+
+/* --- NÚT GIỎ HÀNG --- */
+.add-to-cart {
+    padding: 0 12px 18px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    background:#d6336c;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background:#6f1d1b;
+}
+
+.add-to-cart-btn i {
+    margin-right: 6px;
+}
+
+/* ======================= VIDEO SECTION ======================= */
+.video-section {
+    padding: 70px 0; /* Match section padding */
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-section .container {
+    text-align: center; /* Center the video */
+}
+
+.video-section video {
+    width: 100%; /* Full width within container */
+    max-width: 100%; /* Prevent overflow */
+    height: auto;
+    border-radius: 12px; /* Match product card radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Match product shadow */
+    display: block; /* Ensure proper centering */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* ======================= RESPONSIVE ======================= */
+@media (max-width: 1200px) {
+    .category-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product {
+        width: 45%;
+    }
+
+    .product-img img {
+        height: 200px;
+    }
+
+    .products-slick .slick-prev {
+        left: -20px;
+    }
+
+    .products-slick .slick-next {
+        right: -20px;
+    }
+
+    .video-section video {
+        max-width: 90%; /* Slightly reduce on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .category-list {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-img {
+        height: 100px;
+    }
+
+    .shop-body h3 {
+        font-size: 1em;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product-img img {
+        height: 180px;
+    }
+
+    .section-title .title {
+        font-size: 2em;
+    }
+
+    .slide img {
+        max-height: 350px;
+        border-radius: 10px;
+    }
+
+    .slideshow .slick-prev,
+    .slideshow .slick-next {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .video-section {
+        padding: 50px 0; /* Reduce padding on smaller screens */
+    }
+
+    .video-section video {
+        max-width: 95%; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-img {
+        height: 90px;
+    }
+
+    .shop-body h3 {
+        font-size: 0.9em;
+    }
+
+    .product-img img {
+        height: 150px;
+    }
+
+    .product-body p {
+        font-size: 0.85em;
+    }
+
+    .slide img {
+        max-height: 250px;
+        border-radius: 8px;
+    }
+
+    .slideshow .slick-dots li button {
+        width: 12px;
+        height: 12px;
+    }
+
+    .video-section {
+        padding: 30px 0; /* Further reduce on very small screens */
+    }
+
+    .video-section video {
+        max-width: 100%; /* Full width on smallest screens */
+    }
+  
+    
+}
+
+/* Kiểu cho thông báo thành công */
+.success {
+    color: #28a745;
+    background-color: #e7f3e7;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}

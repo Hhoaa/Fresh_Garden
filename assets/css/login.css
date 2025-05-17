@@ -1,0 +1,98 @@
+/* Nền tổng thể */
+body {
+     background: 
+        linear-gradient(to right, #f8f8f8, #fda2a2),
+        url('https://www.transparenttextures.com/patterns/food.png');
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container login */
+.section .container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px 30px;
+    background-color: #ffe6f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Tiêu đề */
+.section .container h2 {
+    color: #d63384;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Thông báo lỗi */
+.section .container .error {
+    color: #d63384;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* Input chung */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #d63384;
+    outline: none;
+}
+
+/* Button */
+.login-form .login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #d63384;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form .login-btn:hover {
+    background-color: #b0216e;
+}
+
+/* Đăng ký link */
+.login-form p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
